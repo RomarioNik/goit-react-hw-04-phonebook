@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   ListItem,
   AvatarWrapper,
@@ -26,6 +28,13 @@ const ContactItem = ({ id, name, number, onDeleteContact }) => {
       </TrashButton>
     </ListItem>
   );
+};
+
+ContactItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactItem;
